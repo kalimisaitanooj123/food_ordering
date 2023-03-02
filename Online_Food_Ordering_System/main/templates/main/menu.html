@@ -1,0 +1,52 @@
+{% extends "main/layout.html" %}
+{% block content %}
+
+<center><h1>Our Dishes</h1></center>
+ <div class="container-fluid"><br>
+    <div class="row">
+      <div class="col-md-4"><img src="https://i.pinimg.com/736x/ca/fb/15/cafb15772e44cd0b095ddfe38083132d.jpg" style="width:400px; height:300px">
+          <h4 style="color:DodgerBlue;">Stratas</h4>
+<!--       <button class="btn btn-success">View Details</button><br></div>-->
+            <a href="{% url 'main:strata' %}" class="btn btn-success">View Details</a><br><br>
+        </div><br>
+
+
+            <div class="col-md-4"><img src="https://wallpaperaccess.com/full/1316970.jpg" style="width:400px; height:300px">
+                <h4 style="color:DodgerBlue;">Main course</h4>
+        <a href="{% url 'main:main' %}" class="btn btn-success">View Details</a><br><br>
+        </div>
+            <div class="col-md-4"><img src="https://d1v9pyzt136u2g.cloudfront.net/blog/wp-content/uploads/2022/10/04152918/777313fc55bb95d999b1b598b1274fbb.jpg" style="width:400px; height:300px">
+            <h4 style="color:DodgerBlue;">Desserts</h4>
+            <a href="{% url 'main:home' %}" class="btn btn-success">View Details</a><br><br>
+        </div>
+  </div>
+
+</div>
+
+<div>
+     <center><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--_yfVrxfX--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/20k4t9fbnn4nhgahxpfq.PNG" style="width:700px; height:300px"></center>
+</div>
+
+
+
+<!--<center><h1>Our Dishes</h1></center>-->
+<!-- <div class="container-fluid"><br>-->
+<!--    <div class="row">-->
+<!--      <div class="col-md-4"><img src="https://wallpapercave.com/wp/wp2634897.jpg" style="width:1450px; height:550px">-->
+<!--          <h4 style="color:DodgerBlue;">Stratas</h4>-->
+<!--&lt;!&ndash;       <button class="btn btn-success">View Details</button><br></div>&ndash;&gt;-->
+<!--            <a href="{% url 'main:strata' %}" class="btn btn-success">View Details</a><br><br>-->
+
+<!--          <h4 style="color:DodgerBlue;">Main course</h4>-->
+<!--        <a href="{% url 'main:main' %}" class="btn btn-success">View Details</a><br><br>-->
+<!--            <h4 style="color:DodgerBlue;">Desarts</h4>-->
+<!--            <a href="{% url 'main:home' %}" class="btn btn-success">View Details</a><br><br>-->
+<!--           </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+{% endblock content %}
+
+<!--<div class="col-md-4 d-flex flex-row justify-content-center m-5">-->

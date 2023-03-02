@@ -1,0 +1,83 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us -  Restaurant</title>
+<style>
+  /* Navigation bar styles */
+nav {
+	background-color: #333;
+	color: #fff;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+nav li {
+	float: left;
+}
+nav li a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+nav li a:hover {
+	background-color: #111;
+}
+
+/* Main content styles */
+main {
+	max-width: 800px;
+	margin: auto;
+	padding: 20px;
+	text-align: justify;
+}
+main h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+main p {
+	margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+
+	bottom: 0;
+	width: 100%;
+}
+footer p {
+	margin: 0;
+}
+
+</style>
+</head>
+<body>
+
+
+	<!-- Main content -->
+	<main>
+		<h1>About Us</h1>
+		<p>Welcome to Yellow Chilli Restaurant, where we serve the best food in town. Our menu features a variety of delicious dishes made with fresh, locally-sourced ingredients. We are passionate about creating a welcoming atmosphere for our guests and providing excellent service.</p>
+		<p>Our team of experienced chefs and friendly staff work together to ensure that every meal is a memorable experience. We believe that dining should be an enjoyable and relaxing experience, and we strive to create an atmosphere that is both comfortable and stylish.</p>
+		<p>Thank you for choosing Example Restaurant. We look forward to serving you soon!</p>
+	</main>
+
+	<!-- Footer -->
+	<footer class='fixed-bottom'>
+		<p>&copy; 2023 Yellow Chilli Restaurant. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
+{% endblock content %}

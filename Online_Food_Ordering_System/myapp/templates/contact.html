@@ -1,0 +1,39 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Login Form Example</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{%static 'css/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="login-form">
+<form action="" method="post" novalidate>
+        <center>
+    <h1>Contact us for any Queries</h1>
+
+    <table>
+         {% csrf_token %}
+           {{data1}}
+           </table>
+               <div class="action">
+                   <input type="button"><button>Submit</button>
+      <button><a href="/">Back</a></button>
+               </div>
+        </center>
+</form>
+<center>
+{% if messages %}
+    {% for message in messages %}
+    <small {% if message.tags %} class="{{message.tags}}" {% endif %}>  <h2>{{message}}</h2></small>
+    {% endfor%}
+{% endif %}
+</center>
+</div>
+</body>
+</html>
+{% endblock content %}

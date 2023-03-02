@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+<div class="login-form" align="center">
+<h1>Make a Reservation</h1>
+<form method="post">
+                      <div class="content">
+      <div class="input-field">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Make Reservation">
+      </div></div>
+</form>
+
+{% if tables %}
+    <h1>Available Tables</h1>
+
+
+    {% for table in tables %}
+
+        <p><h3>Table {{ table.table_number }} - Capacity: {{ table.capacity }}</h3></p>
+    {% endfor %}
+{% else %}
+    <p>Sorry, there are no tables available for the selected date and time.</p>
+{% endif %}
+
+      </div></div>
+<!-- Bootstrap CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+<!-- Font Awesome CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+<!-- jQuery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!-- Bootstrap JS -->
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+      <script  src="{%static 'js/script.css' %}"></script>
+</div>
+</body>
+</html>
+
+{% endblock content %}

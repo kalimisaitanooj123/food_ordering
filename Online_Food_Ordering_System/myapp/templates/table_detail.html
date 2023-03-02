@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+          <div class="container" align="center">
+              <br/>
+              <br/>
+              <br/>
+
+<h1>Table {{ table.table_number }}</h1>
+              <br/>
+              <br/>
+              <br/>
+              <h2><p>Capacity: {{ table.capacity }}</p>
+                  <br/>
+{% if table.is_booked %}
+    <p>This table is currently booked.</p>
+                  <br/>
+{% else %}
+    <p>This table is currently available.</p>
+                  <br/>
+              <a href="{% url 'myapp:reservation' %}">Book Your Table</a>
+{% endif %}
+{% endblock content %}
+              </h2> </div>

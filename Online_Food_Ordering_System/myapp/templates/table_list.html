@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="login-form" align="center">
+          <div class="login-form">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+
+<h1>Available Tables</h1>
+<br/>
+
+{% for table in tables %}
+              <p><h2><a href="{% url 'myapp:table_detail' table.pk %}">Table {{ table.table_number }} - Capacity: {{ table.capacity }}</a></h2></p>
+{% endfor %}
+
+          </div>
+</div>
+{% endblock content %}
